@@ -1,6 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-lewagon-white {
+  background-color: white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +15,25 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-logo {
+  color: $dark-blue;
+  font-family: 'Original Surfer', cursive;
+  font-size: 30px;
+}
+
+a.navbar-logo:hover {
+  color: $dark-blue;
+  text-decoration: none;
+}
+
+.btn-wipeout {
+  background-color: $dark-blue;
+  color: white;
+}
+
+a.btn-wipeout:hover {
+  background-color: $dark-blue;
+  color: white;
 }

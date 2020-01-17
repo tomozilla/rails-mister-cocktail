@@ -5,6 +5,7 @@ class CocktailsController < ApplicationController
 
   def show
     @cocktail = Cocktail.find(params[:id])
+    @doses = Dose.where(cocktail_id: @cocktail.id)
   end
 
   def new
@@ -13,6 +14,7 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
+    @cocktail.img_url = params[:cocktail][:img_url]
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
